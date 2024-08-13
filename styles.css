@@ -1,81 +1,60 @@
-
-
 body {
     font-family: Arial, sans-serif;
-    font-size: 16px; /* تعيين حجم الخط الأساسي */
     margin: 0;
     padding: 0;
     background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #ffffff;
+    color: rgb(238, 238, 238); /* جعل النص بلون أبيض للتباين مع الخلفية */
 }
 
 .container {
-    max-width: 100%;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 1rem; /* استخدم وحدة rem للتباعد */
+    padding: 20px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* نصف شفاف لتحسين قابلية قراءة النص */
     border-radius: 30px;
 }
 
-/* Typography */
 h1, p {
-    margin: 3.75rem 0; 
-    line-height: 1.6;
-}
-
-h1 {
-    font-size: 2.5rem;
-    display: inline; /*  inline لجعل النص في سطر واحد */
-}
-
-p {
-    font-size: 1.2rem;
+    margin: 50px 0;
 }
 
 a {
     display: block;
-    width: 50%; /* عرض مرن */
-    max-width: 200px; /* عرض أقصى */
+    width: 200px;
     margin: 10px auto;
-    padding: 0.625rem;
+    padding: 10px;
     text-align: center;
     background-color: #7a0d6c;
     color: rgb(255, 255, 255);
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 a:hover {
-    background-color: #053cc8;
-    transform: scale(1.05);
+    background-color: #0056b3;
 }
 
-/* Form Styles with Flexbox */
 form {
-    max-width: 100%;
-    margin: 1.25rem auto;
-    padding: 1.25rem; 
-    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* نصف شفاف لتحسين قابلية قراءة النص */
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-label {
-    align-self: flex-start;
+label, input, textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 input, textarea {
-    padding: 0.625rem; 
-    border: 1px solid #000;
+    padding: 10px;
+    border: 1px solid #000000;
     border-radius: 5px;
-    width: 100%;
-    box-sizing: border-box; 
 }
 
 input[type="submit"] {
@@ -83,60 +62,35 @@ input[type="submit"] {
     color: rgb(255, 255, 255);
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 input[type="submit"]:hover {
     background-color: #687d00;
-    transform: scale(1.05);
 }
 
-/* Message Display with CSS Grid */
-.message-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.25rem; 
-    margin: 1.25rem auto;
-    max-width: 100%;
-    padding: 1.25rem; 
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 20px;
-}
-
-.message-item {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 0.9375rem; 
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    color: #fff;
-}
-
-/* Table Styles */
 table {
     width: 80%;
-    margin: 1.875rem auto; 
+    margin: 20px auto;
     border-collapse: collapse;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* نصف شفاف لتحسين قابلية قراءة النص */
     color: white;
 }
 
 th, td {
-    padding: 0.625rem; 
+    padding: 10px;
     text-align: left;
     border: 1px solid #ddd;
 }
 
 th {
-    background-color: #77017b;
-    color: rgb(248, 248, 248);
+    background-color: #007BFF;
+    color: white;
 }
 
-/* Image and Media Optimization */
-img, video {
+img {
     max-width: 100%;
-    height: auto;
     display: block;
-    margin: 1.25rem auto; 
+    margin: 20px auto;
     border-radius: 10px;
 }
 
@@ -145,27 +99,23 @@ img, video {
     0% {
         opacity: 0;
         transform: scale(0.5);
-        color: transparent;
     }
     50% {
         opacity: 1;
         transform: scale(1.2);
-        color: rgb(235, 235, 31);
     }
     100% {
         opacity: 1;
         transform: scale(1);
-        color: white; /*   اللون الطبيعي */
     }
 }
 
 .welcome span {
     display: inline-block;
-    opacity: 0;
+    opacity: 1;
     animation: letter-appear 1s ease-in-out forwards;
 }
 
-/* تأخير الأنيميشن لكل حرف */
 .welcome span:nth-child(1) { animation-delay: 0s; }
 .welcome span:nth-child(2) { animation-delay: 0.1s; }
 .welcome span:nth-child(3) { animation-delay: 0.2s; }
@@ -187,12 +137,10 @@ img, video {
 .welcome span:nth-child(19) { animation-delay: 1.8s; }
 .welcome span:nth-child(20) { animation-delay: 1.9s; }
 .welcome span:nth-child(21) { animation-delay: 2s; }
-.welcome span:nth-child(20) { animation-delay: 2.1s; }
-.welcome span:nth-child(20) { animation-delay: 2.2s; }
+.welcome span:nth-child(22) { animation-delay: 2.1s; }
+.welcome span:nth-child(23) { animation-delay: 2.2s; }
 .welcome span:nth-child(24) { animation-delay: 2.3s; }
 .welcome span:nth-child(25) { animation-delay: 2.4s; }
 .welcome span:nth-child(26) { animation-delay: 2.5s; }
 .welcome span:nth-child(27) { animation-delay: 2.6s; }
 .welcome span:nth-child(28) { animation-delay: 2.7s; }
-.w
-
