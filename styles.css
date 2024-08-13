@@ -4,7 +4,7 @@ body {
     padding: 0;
     background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: rgb(238, 238, 238); /* خلي النص بلون أبيض  */
+    color: rgb(238, 238, 238); /* جعل النص بلون أبيض للتباين مع الخلفية */
 }
 
 .container {
@@ -12,7 +12,7 @@ body {
     margin: 0 auto;
     padding: 20px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5); /* نصف شفاف لتحسين قابلية قراءة النص */
     border-radius: 30px;
 }
 
@@ -40,7 +40,7 @@ form {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5); /* نصف شفاف لتحسين قابلية قراءة النص */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
@@ -72,7 +72,7 @@ table {
     width: 80%;
     margin: 20px auto;
     border-collapse: collapse;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5); /* نصف شفاف لتحسين قابلية قراءة النص */
     color: white;
 }
 
@@ -144,3 +144,18 @@ img {
 .welcome span:nth-child(26) { animation-delay: 2.5s; }
 .welcome span:nth-child(27) { animation-delay: 2.6s; }
 .welcome span:nth-child(28) { animation-delay: 2.7s; }
+
+.error {
+    color: red;
+    font-size: 15px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.success {
+    color: rgb(78, 255, 78);
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+}
